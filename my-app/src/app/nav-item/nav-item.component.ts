@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
   selector: 'app-nav-item',
@@ -7,28 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavItemComponent implements OnInit {
 
-myList = [
-{
-  id:1,
-  txt: '1'
-},
-{
-  id:2,
-  txt: '2' 
-},
-{
-  id:3 ,
-  txt: '3'
-},
-{
-  id:4,
-  txt: '4' 
-}
-];
+
+
+
+
+@Input() item;
 
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  myFunc() {
+    console.log('child: ' + this.item.id);
   }
 
 }

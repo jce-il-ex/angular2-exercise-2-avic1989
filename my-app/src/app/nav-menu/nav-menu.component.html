@@ -1,8 +1,3 @@
-<div  class = 'box'>   <!--ngIf is like if in java .-->
-  {{item.id}}
-  <span *ngIf="item.txt">
-  <input [value]="item.txt">  <!-- anther way to call data from class [] to take from class  -->
-  </span>
-  <button (click)= "myFunc()">{{item.id}} </button>   <!--() to send to class  -->
-  <!--  </span> -->
-</div>
+
+
+<app-nav-item *ngFor="let k of myList" [item]="k"></app-nav-item> <!--ngFor is like for in java .-->

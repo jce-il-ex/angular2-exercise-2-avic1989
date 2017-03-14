@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,7 +7,26 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
 
-@Input() item;
+  myList = [
+{
+  id:1,
+  txt: '1'
+},
+{
+  id:2,
+  txt: '2' 
+},
+{
+  id:3 ,
+  txt: '3'
+},
+{
+  id:4,
+  txt: '4' 
+}
+];
+
+
 
   constructor() { }
 
@@ -15,8 +34,5 @@ export class NavMenuComponent implements OnInit {
 
   }
 
-  myFunc() {
-    console.log('child: ' + this.item.id);
-  }
 
 }
